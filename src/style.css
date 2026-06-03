@@ -1,0 +1,433 @@
+:root {
+   --bleu-fonce: #1f4faf;
+   --bleu: #2a6fdb;
+   --bleu-clair: #4a90e2;
+   --anthracite: #3f4045;
+   --gris-clair: #f4f6fa;
+   --gris-bordure: #dde3ec;
+   --blanc: #ffffff;
+   --rouge: #d9534f;
+   --vert: #4caf50;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: var(--gris-clair);
+   color: var(--anthracite);
+   line-height: 1.5;
+}
+
+
+
+
+
+/* =============================== */
+/* ===== Barre de navigation ===== */
+/* =============================== */
+
+.navbar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: var(--blanc);
+   padding: 0 30px;
+   height: 70px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+   position: sticky;
+   top: 0;
+   z-index: 100;
+}
+
+.navbar-gauche {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.navbar-gauche img {
+   height: 44px;
+}
+
+.navbar-gauche .nom-site {
+   font-size: 1.5rem;
+   font-weight: bold;
+   background: linear-gradient(90deg, var(--bleu-fonce), var(--bleu-clair));
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.navbar-milieu {
+   display: flex;
+   gap: 10px;
+}
+
+.navbar-milieu a {
+   font-size: 1rem;
+   color: var(--anthracite);
+   cursor: pointer;
+   padding: 8px 16px;
+   border-radius: 6px;
+   text-decoration: none;
+   transition: background 0.2s, color 0.2s;
+}
+
+.navbar-milieu a:hover,
+.navbar-milieu a.router-link-active {
+   background: var(--gris-clair);
+   color: var(--bleu);
+   font-weight: 600;
+}
+
+.navbar-droite {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.navbar-droite .pseudo {
+   font-weight: 600;
+   color: var(--bleu-fonce);
+}
+
+
+
+
+
+/* =================== */
+/* ===== Boutons ===== */
+/* =================== */
+
+.btn {
+   border: none;
+   border-radius: 6px;
+   padding: 9px 18px;
+   font-size: 0.95rem;
+   cursor: pointer;
+   transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active {
+   transform: scale(0.97);
+}
+
+.btn-principal {
+   background: linear-gradient(90deg, var(--bleu-fonce), var(--bleu));
+   color: var(--blanc);
+}
+
+.btn-secondaire {
+   background: var(--blanc);
+   color: var(--bleu);
+   border: 2px solid var(--bleu);
+}
+
+.btn-principal:hover,
+.btn-secondaire:hover {
+   opacity: 0.9;
+}
+
+.btn-danger {
+   background: var(--rouge);
+   color: var(--blanc);
+}
+
+
+
+
+
+/* ========================== */
+/* ===== Page d'accueil ===== */
+/* ========================== */
+
+.hero {
+   text-align: center;
+   padding: 80px 20px;
+   background: linear-gradient(135deg, var(--bleu-fonce), var(--bleu-clair));
+   color: var(--blanc);
+}
+
+.hero h1 {
+   font-size: 2.8rem;
+   margin-bottom: 16px;
+}
+
+.hero p {
+   font-size: 1.2rem;
+   max-width: 700px;
+   margin: 0 auto 30px;
+   opacity: 0.95;
+}
+
+.hero .btn {
+   font-size: 1.05rem;
+   padding: 12px 28px;
+}
+
+.presentation {
+   max-width: 900px;
+   margin: 50px auto;
+   padding: 0 20px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 24px;
+}
+
+.carte-info {
+   background: var(--blanc);
+   border-radius: 10px;
+   padding: 24px;
+   text-align: center;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.carte-info h3 {
+   color: var(--bleu);
+   margin-bottom: 10px;
+}
+
+
+
+
+
+/* ============================ */
+/* ===== Contenu / listes ===== */
+/* ============================ */
+
+.contenu {
+   max-width: 1100px;
+   margin: 40px auto;
+   padding: 0 20px;
+}
+
+.contenu h2 {
+   margin-bottom: 20px;
+   color: var(--anthracite);
+}
+
+.barre-recherche {
+   display: flex;
+   gap: 10px;
+   margin-bottom: 24px;
+}
+
+.barre-recherche input {
+   flex: 1;
+   padding: 11px 14px;
+   border: 1px solid var(--gris-bordure);
+   border-radius: 6px;
+   font-size: 1rem;
+}
+
+.barre-recherche input:focus {
+   outline: none;
+   border-color: var(--bleu);
+}
+
+.grille {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 20px;
+}
+
+.carte {
+   background: var(--blanc);
+   border-radius: 10px;
+   padding: 20px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+   border-top: 4px solid var(--bleu);
+   display: flex;
+   flex-direction: column;
+}
+
+.carte h3 {
+   color: var(--bleu-fonce);
+   margin-bottom: 8px;
+}
+
+.carte .info {
+   font-size: 0.92rem;
+   color: var(--anthracite);
+   margin-bottom: 4px;
+}
+
+.carte .prix {
+   font-size: 1.3rem;
+   font-weight: bold;
+   color: var(--bleu);
+   margin: 10px 0;
+}
+
+.carte .etiquette {
+   display: inline-block;
+   background: var(--gris-clair);
+   color: var(--bleu);
+   border-radius: 20px;
+   padding: 3px 12px;
+   font-size: 0.8rem;
+   margin: 2px 2px 8px 0;
+}
+
+.carte .btn {
+   margin-top: auto;
+}
+
+.message-vide {
+   text-align: center;
+   color: #888;
+   padding: 40px;
+}
+
+
+
+
+
+/* ============================ */
+/* ===== Fenêtres modales ===== */
+/* ============================ */
+
+.fond-modale {
+   position: fixed;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.5);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 200;
+}
+
+.modale {
+   background: var(--blanc);
+   border-radius: 12px;
+   padding: 30px;
+   width: 100%;
+   max-width: 460px;
+   max-height: 90vh;
+   overflow-y: auto;
+}
+
+.modale h2 {
+   margin-bottom: 20px;
+   color: var(--bleu-fonce);
+   text-align: center;
+}
+
+.champ {
+   margin-bottom: 16px;
+}
+
+.champ label {
+   display: block;
+   margin-bottom: 6px;
+   font-size: 0.9rem;
+   font-weight: 600;
+}
+
+.champ input:not([type="checkbox"]),
+.champ select {
+   width: 100%;
+   padding: 10px 12px;
+   border: 1px solid var(--gris-bordure);
+   border-radius: 6px;
+   font-size: 1rem;
+}
+
+.champ input:not([type="checkbox"]):focus,
+.champ select:focus {
+   outline: none;
+   border-color: var(--bleu);
+}
+
+.liste-jeux {
+   max-height: 160px;
+   overflow-y: auto;
+   border: 1px solid var(--gris-bordure);
+   border-radius: 6px;
+   padding: 8px;
+}
+
+.liste-jeux label {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-weight: normal;
+   padding: 8px 10px;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: background 0.15s;
+}
+
+.liste-jeux label:hover {
+   background: var(--gris-clair);
+}
+
+.liste-jeux input[type="checkbox"] {
+   flex: none;
+   width: 16px;
+   height: 16px;
+   margin: 0;
+   cursor: pointer;
+}
+
+.liste-jeux label .nom-jeu {
+   flex: 1;
+}
+
+.liste-jeux label small {
+   color: #888;
+   font-size: 0.82rem;
+   white-space: nowrap;
+}
+
+.actions-modale {
+   display: flex;
+   gap: 10px;
+   margin-top: 20px;
+}
+
+.actions-modale .btn {
+   flex: 1;
+}
+
+.message-modale {
+   padding: 10px;
+   border-radius: 6px;
+   margin-bottom: 16px;
+   text-align: center;
+   font-size: 0.9rem;
+}
+
+.message-succes {
+   background: #e8f5e9;
+   color: var(--vert);
+}
+
+.message-erreur {
+   background: #fdecea;
+   color: var(--rouge);
+}
+
+@media (max-width: 768px) {
+   .presentation {
+      grid-template-columns: 1fr;
+   }
+   .navbar {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 12px 16px;
+      gap: 10px;
+   }
+   .navbar-milieu {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+   }
+}
